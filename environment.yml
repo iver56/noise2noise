@@ -1,0 +1,13 @@
+name: noise2noise
+channels:
+- defaults
+dependencies:
+- numpy>=1.14.1,<=1.15.4
+- pip>=9.0.1,<=19
+- python=3.6.6
+- scipy=1.1
+- pip:
+  - nibabel==2.3.0
+  - Pillow==5.2.0
+  - tensorflow-gpu>=1.8.0,<=1.9.0
+  - typeguard==2.2.2
