@@ -182,3 +182,15 @@ The expected average PSNR on the validation set (named `test_db_clamped` in code
 Noise-to-noise training is enabled by default for the MRI case.  To use noise-to-clean training, edit `config_mri.py` and change `corrupt_targets=True` to `corrupt_targets=False`.
 
 Training for 300 epochs takes roughly 9 hours on an NVIDIA Titan V GPU.
+
+# Docker
+
+The noise2noise code can be run inside a Docker container on a computer with linux and a
+CUDA-capable GPU. This can be useful for experimenting with training scripts that take long
+time. Docker can also be useful when putting the code into production. Here's how to build a
+noise2noise docker image and then run a docker container:
+
+* `docker build -t noise2noise .`
+* `docker run --rm --runtime nvidia -it -v /path/on/host/noise2noise-data:/mnt/noise2noise-data noise2noise:latest /bin/bash`
+
+This assumes that you have nvidia-docker2 installed on the machine.
