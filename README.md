@@ -140,7 +140,13 @@ _Note: When running a validation set through the network, you should match the a
 
 Use the `dataset_tool_mri.py` script to generate training and validation datasets for the N2N MRI case.
 
-**Step #1**: Download the IXI-T1 dataset from: https://brain-development.org/ixi-dataset/.  Unpack to some location.
+**Step #1**: Download the IXI-T1 dataset:
+
+`wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar`
+
+Unpack the tar file:
+
+`tar -xvf IXI-T1.tar`
 
 **Step #2**: Convert the IXI-T1 dataset into a set of PNG files:
 
